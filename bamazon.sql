@@ -3,6 +3,7 @@ USE bamazon;
 CREATE TABLE products(item_id integer(10) auto_increment NOT NULL,
 product_name VARCHAR(224) NOT NULL,
 department_name VARCHAR(224) NOT NULL,
+department_id VARCHAR(224) NOT NULL,
 price INTEGER (10) NOT NULL,
 stock_quantity  INTEGER (10)NOT NULL,
 primary key(item_id));
