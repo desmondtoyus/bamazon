@@ -72,7 +72,7 @@ function createDept() {
 // view all products by departments
 function view() {
     console.log()
-    let myQuery = "SELECT *, SUM(product_sales) sumproduct_sales FROM departments INNER JOIN products ON departments.department_id = products.department_id GROUP BY departments.department_id";
+    let myQuery = "SELECT *, SUM(products.product_sales) sumproduct_sales FROM departments INNER JOIN products ON departments.department_id = products.department_id GROUP BY departments.department_id";
     connection.query(myQuery, function (error, results, fields) {
         if (error) {
             console.log(error);
